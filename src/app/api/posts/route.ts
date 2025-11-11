@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache"
 import { NextResponse } from "next/server"
 import { promises as fs } from "node:fs"
 import path from "node:path"
@@ -99,6 +100,11 @@ export const POST = async (request: Request) => {
       content,
       overwrite,
     })
+
+    await Promise.all([
+      revalidatePath("/"),
+      revalidatePath(`/posts/${normalisedSlug}`),
+    ])
 
     return NextResponse.json(
       {
