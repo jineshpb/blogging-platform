@@ -1,0 +1,21 @@
+0 verbose cli /opt/homebrew/Cellar/node/25.1.0_1/bin/node /opt/homebrew/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@11.6.2
+2 info using node@v25.1.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/jpb002r/Library/CloudStorage/OneDrive-WalmartInc/Work/prompting session/blog-site/.npmrc
+5 silly config load:file:/opt/homebrew/etc/npmrc
+6 verbose title npm exec shadcn@latest add button card badge input textarea
+7 verbose argv "exec" "--" "shadcn@latest" "add" "button" "card" "badge" "input" "textarea"
+8 verbose logfile logs-max:10 dir:/Users/jpb002r/Library/CloudStorage/OneDrive-WalmartInc/Work/prompting session/blog-site/.npm_cache/_logs/2025-11-11T05_19_56_793Z-
+9 verbose logfile /Users/jpb002r/Library/CloudStorage/OneDrive-WalmartInc/Work/prompting session/blog-site/.npm_cache/_logs/2025-11-11T05_19_56_793Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+12 http fetch GET 200 https://registry.npmjs.org/shadcn 101ms (cache revalidated)
+13 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+14 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+15 verbose cwd /Users/jpb002r/Library/CloudStorage/OneDrive-WalmartInc/Work/prompting session/blog-site
+16 verbose os Darwin 24.6.0
+17 verbose node v25.1.0
+18 verbose npm  v11.6.2
+19 verbose exit 0
+20 info ok
