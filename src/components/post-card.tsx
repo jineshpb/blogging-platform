@@ -15,14 +15,14 @@ export const PostCard = ({ post }: PostCardProps) => {
   const publishedLabel = formatDate(post.publishedAt)
 
   return (
-    <article className="group rounded-2xl border border-border/70 bg-card/60 shadow-sm transition hover:border-primary/60 hover:shadow-lg">
+    <article className="group rounded-2xl border border-border/70 bg-card/60 shadow-sm transition hover:border-primary/60 hover:shadow-lg py-4">
       <Link
         href={`/posts/${post.slug}`}
         aria-label={`Read ${post.title}`}
         className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         <Card className="h-full border-none bg-transparent p-0 shadow-none">
-          <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <CardHeader className="flex flex-col gap-3 sm:flex-col sm:items-start sm:justify-between">
             <div className="flex flex-col gap-1">
               <CardTitle className="text-xl font-semibold tracking-tight text-foreground">
                 {post.title}
