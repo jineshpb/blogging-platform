@@ -11,7 +11,7 @@ const HomePage = async () => {
 
   return (
     <div className="flex flex-col gap-16">
-      <section className="flex flex-col gap-4 rounded-3xl border border-border/80 bg-card/70 p-8 shadow-sm sm:p-12">
+      {/* <section className="flex flex-col gap-4 rounded-3xl border border-border/80 bg-card/70 p-8 shadow-sm sm:p-12">
         <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary">Blog</p>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
           Pen & Pixels is a markdown-first blog for thoughtful engineering notes.
@@ -32,7 +32,7 @@ const HomePage = async () => {
             </Link>
           </Button>
         </div>
-      </section>
+      </section> */}
 
       <section id="writing" aria-label="Latest blog posts" className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
