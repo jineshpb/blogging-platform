@@ -6,8 +6,10 @@ import { Badge } from "@/components/ui/badge"
 import { formatDate } from "@/lib/format"
 import { getPostBySlug, getPostSummaries } from "@/lib/posts"
 
+type PostPageParams = Promise<{ slug: string }>
+
 type PostPageProps = {
-  params: { slug: string }
+  params: PostPageParams
 }
 
 export const revalidate = 60
@@ -22,10 +24,15 @@ export const generateStaticParams = async () => {
   return posts.map((post) => ({ slug: post.slug }))
 }
 
+const resolveSlugFromParams = async (params: PostPageParams) => {
+  const resolvedParams = await params
+  return decodeURIComponent(resolvedParams.slug)
+}
+
 export const generateMetadata = async ({
   params,
 }: PostPageProps): Promise<Metadata> => {
-  const slug = decodeURIComponent(params.slug)
+  const slug = await resolveSlugFromParams(params)
 
   try {
     const post = await getPostBySlug(slug)
@@ -42,7 +49,7 @@ export const generateMetadata = async ({
 }
 
 const PostPage = async ({ params }: PostPageProps) => {
-  const slug = decodeURIComponent(params.slug)
+  const slug = await resolveSlugFromParams(params)
 
   if (!slug) {
     return notFound()
